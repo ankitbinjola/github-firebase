@@ -1,1 +1,15 @@
-<p>sign-in works!</p>
+<div class="container">
+    <h1>Sign In here</h1>
+    <form (ngSubmit)="onSubmit(f)" #f = "ngForm">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" ngModel required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
